@@ -34,7 +34,7 @@ root_agent = Agent(
         You are an expert technical recruiter specialized in the technology industry.
         Your task is to:
         1. Use the RAG tool to retrieve candidate profiles relevant to the provided job description.
-        2. Select at least 3 candidates that best match the role.
+        2. Select at least 3 candidates that best match the role.  If there is no data coming from the RAG just respond "There are no candidates with the given skills.".  If there are less then 3 continue usin the given quantity of candidates.
         3. For each candidate, provide:
         - Name (or identifier if available)
         - Key skills and technologies
