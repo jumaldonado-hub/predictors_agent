@@ -1,0 +1,5 @@
+GOOGLE_GENAI_USE_VERTEXAI=1
+GOOGLE_CLOUD_PROJECT=us-con-gcp-sbx-0001190-100925
+GOOGLE_CLOUD_LOCATION=us-west1
+GS_BUCKET=gs://hackathon-predictors-agent-staging/
+RAG_CORPUS_NAME=projects/254863210019/locations/us-west1/ragCorpora/6052837899185946624

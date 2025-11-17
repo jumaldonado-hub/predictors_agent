@@ -1,0 +1,8 @@
+google-cloud-aiplatform[agent_engines,adk]
+google-adk
+google-cloud-storage
+google-genai
+gitpython
+vertexai
+langchain
+crewai

@@ -1,0 +1,100 @@
+Name: Anna Torres
+Role: Frontend Developer
+Summary: Experienced frontend developer focused on creating responsive, accessible, and high-performance web applications.
+Skills: HTML, CSS, JavaScript, React, Vue.js
+Tools: Git, Jira, Figma, Webpack
+Platforms: AWS, Netlify
+Experience: 5 years building responsive and accessible web interfaces for e-commerce and SaaS platforms.
+Certifications: AWS Certified Cloud Practitioner
+Achievements: Led migration of legacy UI to React, reducing maintenance costs by 20%.
+--------------------------------------------------
+Name: Luis Fernandez
+Role: Backend Developer
+Summary: Backend developer with strong expertise in Python frameworks and cloud-based architectures.
+Skills: Python, Django, Flask, PostgreSQL, REST APIs
+Tools: Git, Docker, Postman, Jenkins
+Platforms: AWS, GCP
+Experience: 6 years developing scalable and secure backend systems for fintech and SaaS products.
+Certifications: Google Cloud Professional Developer
+Achievements: Optimized API response time by 40% through caching and query tuning.
+--------------------------------------------------
+Name: Maria Gomez
+Role: Data Engineer
+Summary: Data engineer specialized in building robust ETL pipelines and distributed data systems.
+Skills: SQL, Spark, Hadoop, Airflow, ETL pipelines
+Tools: Git, Apache Kafka, dbt, Terraform
+Platforms: AWS, Azure
+Experience: 4 years designing data architectures and ETL processes for large-scale analytics.
+Certifications: Azure Data Engineer Associate
+Achievements: Implemented real-time data ingestion reducing latency by 50%.
+--------------------------------------------------
+Name: Carlos Ruiz
+Role: QA Engineer
+Summary: Quality assurance engineer with expertise in automated testing and CI/CD pipelines.
+Skills: Selenium, Cypress, JUnit, TestNG, CI/CD
+Tools: Git, Jira, Jenkins, TestRail
+Platforms: AWS, BrowserStack
+Experience: 5 years ensuring quality in web and mobile applications across multiple industries.
+Certifications: ISTQB Certified Tester
+Achievements: Reduced regression testing time by 60% through automation.
+--------------------------------------------------
+Name: Sofia Martinez
+Role: DevOps Engineer
+Summary: DevOps engineer with deep experience in cloud infrastructure automation and container orchestration.
+Skills: Docker, Kubernetes, Jenkins, Terraform, AWS
+Tools: Git, Helm, Ansible, Prometheus
+Platforms: AWS, GCP, Azure
+Experience: 6 years automating deployments and managing cloud infrastructure for enterprise systems.
+Certifications: Certified Kubernetes Administrator
+Achievements: Implemented CI/CD pipelines reducing deployment time by 70%.
+--------------------------------------------------
+Name: Javier Lopez
+Role: Software Architect
+Summary: Software architect with extensive experience designing scalable microservices and cloud-native systems.
+Skills: Microservices, System Design, Cloud Architecture, Java, .NET
+Tools: Git, UML tools, Jenkins, SonarQube
+Platforms: AWS, Azure, GCP
+Experience: 8 years defining robust and scalable software architectures for global enterprises.
+Certifications: AWS Solutions Architect Professional
+Achievements: Designed microservices architecture reducing system downtime by 30%.
+--------------------------------------------------
+Name: Patricia Vega
+Role: Security Specialist
+Summary: Cybersecurity expert with strong background in penetration testing and compliance audits.
+Skills: Pentesting, OWASP, Firewalls, IAM, SIEM
+Tools: Burp Suite, Nessus, Wireshark, Splunk
+Platforms: AWS, Azure
+Experience: 7 years implementing cybersecurity strategies and audits for financial institutions.
+Certifications: Certified Ethical Hacker (CEH)
+Achievements: Identified and mitigated critical vulnerabilities reducing risk exposure by 45%.
+--------------------------------------------------
+Name: Miguel Castro
+Role: Data Analyst
+Summary: Data analyst skilled in transforming raw data into actionable insights using BI tools.
+Skills: Excel, SQL, Tableau, Power BI, Python
+Tools: Git, Jupyter, Looker, Google Data Studio
+Platforms: AWS, GCP
+Experience: 4 years analyzing data to generate insights for marketing and operations teams.
+Certifications: Tableau Desktop Specialist
+Achievements: Developed dashboards that improved decision-making speed by 35%.
+--------------------------------------------------
+Name: Laura Hernandez
+Role: Machine Learning Engineer
+Summary: ML engineer with expertise in building predictive models and deploying AI solutions.
+Skills: Python, TensorFlow, PyTorch, Scikit-learn, NLP
+Tools: Git, MLflow, Jupyter, DVC
+Platforms: AWS, GCP, Azure
+Experience: 5 years developing predictive models and intelligent systems for healthcare and finance.
+Certifications: TensorFlow Developer Certificate
+Achievements: Built NLP model improving chatbot accuracy by 25%.
+--------------------------------------------------
+Name: Andrew Morales
+Role: Tech Lead
+Summary: Technology leader with strong experience in managing teams and delivering complex projects.
+Skills: Team Management, Scrum, Java, React, Architecture
+Tools: Git, Jira, Confluence, Jenkins
+Platforms: AWS, GCP
+Experience: 9 years leading technology projects and multidisciplinary teams in agile environments.
+Certifications: Scrum Master Certified
+Achievements: Successfully led migration to microservices architecture reducing release cycles by 40%.
+--------------------------------------------------
