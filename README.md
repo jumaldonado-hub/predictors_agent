@@ -40,54 +40,68 @@ Assign roles to service account
 
 Using in the case of viewer
 
-gcloud projects add-iam-policy-binding <ProjectID> `
-  --member="serviceAccount:<service account>" `
+```bash 
+gcloud projects add-iam-policy-binding <PROJECT_ID> `
+  --member="serviceAccount:<SERVICE_ACCOUNT>" `
   --role="roles/aiplatform.viewer" `
   --condition=None
+``` 
 
 ### Create Google Storage bucket and upload the code files
 
 Create Storage Bucket
-  gsutil mb -l <region> gs://<bucket>/
+```bash 
+gsutil mb -l <REGION> gs://<BUCKET>/
+``` 
 
 Upload Google Storeage Bucket
-  gsutil cp -r "<Project Local Path>\*" gs://<bucket>/
+```bash 
+  gsutil cp -r "<PROJECT_LOCAL_PATH>\*" gs://<BUCKET>/
+```
 
 ### Move file to Cloud Storage (optional/no python library)
 
 IN Cloud Console 
-  pip install google-adk
-  export PATH=$PATH:~/.local/bin
-  adk --help
+```bash 
+pip install google-adk
+export PATH=$PATH:~/.local/bin
+adk --help
+```
 
 Download Agent Project
-  mkdir agent_predictors_ai
-  gsutil cp -r gs://<bucket>/* agent_predictors_ai/
+```bash 
+mkdir agent_predictors_ai
+gsutil cp -r gs://<BUCKET>/* agent_predictors_ai/
 
 cd agent_predictors_ai/
 mv env .env
+```
 
 ### Test agent conversation
-
+```bash 
 adk run agent_predictors_ai
 adk web
+```
 
 ### Re deploy
+```bash 
+gsutil cp -r "<PROJECT_LOCAL_PATH>\*" gs://<BUCKET>/
 
-gsutil cp -r "<Local Path>\*" gs://<bucket>/
-
-gsutil cp -r gs://<bucket>/* agent_predictors_ai/
+gsutil cp -r gs://<BUCKET>/* agent_predictors_ai/
 adk run agent_predictors_ai
 adk web
+```
 
 ### Deploy Agent in Vertex AI
 
+```bash 
 adk deploy agent_engine \
-  --project=<Project> \
-  --region=<Region> \
-  --staging_bucket=gs://<bucket> \
+  --project=<PROJECT> \
+  --region=<REGION> \
+  --staging_bucket=gs://<BUCKET> \
   --display_name="predictors_recruiter_agent" \
   ./agent_predictors_ai
+```
 
 ## Contact  
 
