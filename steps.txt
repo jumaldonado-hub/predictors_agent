@@ -77,7 +77,7 @@ adk web
 -------------------------------------------------------------------
 # Re deploy
 -------------------------------------------------------------------
-gsutil cp -r "C:\Users\jumaldonado\OneDrive - Deloitte (O365D)\Documents\Deloitte\Hackathon AI\Project\Agent_ADK\*" gs://hackathon-predictors-agent-staging/
+gsutil cp -r "C:\Users\jumaldonado\OneDrive - Deloitte (O365D)\Documents\Deloitte\Hackathon AI\Project\predictors_agent\*" gs://hackathon-predictors-agent-staging/
 
 gsutil cp -r gs://hackathon-predictors-agent-staging/* agent_predictors_ai/
 adk run agent_predictors_ai
@@ -93,6 +93,6 @@ adk deploy agent_engine \
   --project=us-con-gcp-sbx-0001190-100925 \
   --region=us-central1 \
   --staging_bucket=gs://hackathon-predictors-agent-staging \
-  --display_name="hackathon-predictors-agent" \
+  --display_name="predictors_recruiter_agent" \
   ./agent_predictors_ai
   
