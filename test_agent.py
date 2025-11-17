@@ -25,7 +25,7 @@ if not engines:
 print("Reasoning engine: " + engines[0].resource_name)
 engine = reasoning_engines.ReasoningEngine(engines[0].resource_name)
 
-# session = engine.create_session(session_id="session1")
+session = engine.create_session(session_id="session1", user_id='user1')
 sessions_data = engine.list_sessions()
 print(sessions_data)
 
