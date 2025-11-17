@@ -29,7 +29,7 @@ candidate_profiles_retrieval = VertexAiRagRetrieval(
 # Agent definition
 root_agent = Agent(
     model="gemini-2.5-flash",
-    name="rag_recruiter_agent",
+    name="predictors_recruiter_agent",
     instruction=""" 
         You are an expert technical recruiter specialized in the technology industry.
         Your task is to:

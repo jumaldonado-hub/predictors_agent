@@ -1,0 +1,98 @@
+-------------------------------------------------------------------
+# gcloud account and project config
+-------------------------------------------------------------------
+
+gcloud init 
+gcloud auth login
+gcloud config set project us-con-gcp-sbx-0001190-100925
+gcloud auth application-default login
+gcloud config list
+
+-------------------------------------------------------------------
+# Set permission and roles for service account
+-------------------------------------------------------------------
+
+# Service account
+service-254863210019@gcp-sa-discoveryengine.iam.gserviceaccount.com
+
+# Assign roles to service account
+
+# 1. Discovery Engine Service Agent
+gcloud projects add-iam-policy-binding us-con-gcp-sbx-0001190-100925 `
+  --member="serviceAccount:service-254863210019@gcp-sa-discoveryengine.iam.gserviceaccount.com" `
+  --role="roles/discoveryengine.serviceAgent" `
+  --condition=None
+
+# 2. Editor
+gcloud projects add-iam-policy-binding us-con-gcp-sbx-0001190-100925 `
+  --member="serviceAccount:service-254863210019@gcp-sa-discoveryengine.iam.gserviceaccount.com" `
+  --role="roles/editor" `
+  --condition=None
+
+# 3. Vertex AI User
+gcloud projects add-iam-policy-binding us-con-gcp-sbx-0001190-100925 `
+  --member="serviceAccount:service-254863210019@gcp-sa-discoveryengine.iam.gserviceaccount.com" `
+  --role="roles/aiplatform.user" `
+  --condition=None
+
+# 4. Vertex AI Viewer
+gcloud projects add-iam-policy-binding us-con-gcp-sbx-0001190-100925 `
+  --member="serviceAccount:service-254863210019@gcp-sa-discoveryengine.iam.gserviceaccount.com" `
+  --role="roles/aiplatform.viewer" `
+  --condition=None
+
+-------------------------------------------------------------------
+# Create Google Stora bucket and upload the code files
+-------------------------------------------------------------------
+# Create Storage Bucket
+gsutil mb -l us-central1 gs://hackathon-predictors-agent-staging
+
+
+# Upload Google Storeage Bucket
+gsutil cp -r "C:\Users\jumaldonado\OneDrive - Deloitte (O365D)\Documents\Deloitte\Hackathon AI\Project\Agent_ADK\*" gs://hackathon-predictors-agent-staging/
+
+
+-------------------------------------------------------------------
+# Move file to Cloud Storage (optional/no python library)
+-------------------------------------------------------------------
+# IN Cloud Console 
+pip install google-adk
+export PATH=$PATH:~/.local/bin
+adk --help
+
+#-- Download Agent Project
+mkdir agent_predictors_ai
+gsutil cp -r gs://hackathon-predictors-agent-staging/* agent_predictors_ai/
+
+cd agent_predictors_ai/
+mv env .env
+
+-------------------------------------------------------------------
+# Test agent conversation
+-------------------------------------------------------------------
+
+adk run agent_predictors_ai
+adk web
+
+-------------------------------------------------------------------
+# Re deploy
+-------------------------------------------------------------------
+gsutil cp -r "C:\Users\jumaldonado\OneDrive - Deloitte (O365D)\Documents\Deloitte\Hackathon AI\Project\Agent_ADK\*" gs://hackathon-predictors-agent-staging/
+
+gsutil cp -r gs://hackathon-predictors-agent-staging/* agent_predictors_ai/
+adk run agent_predictors_ai
+
+adk web
+
+
+-------------------------------------------------------------------
+# Deploy Agent in Vertex AI
+-------------------------------------------------------------------
+
+adk deploy agent_engine \
+  --project=us-con-gcp-sbx-0001190-100925 \
+  --region=us-central1 \
+  --staging_bucket=gs://hackathon-predictors-agent-staging \
+  --display_name="hackathon-predictors-agent" \
+  ./agent_predictors_ai
+  
